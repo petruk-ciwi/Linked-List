@@ -30,6 +30,39 @@ void InsFront(int nilai) {
 	}
 	cout<<"\nData "<<nilai<<" dimasukan ke dalam list\n";
 }
+
+void InsBack(int nilai) {
+	node *baru, *bantu;
+	baru=new node;
+	baru->data=nilai;
+	baru->next=NULL;
+	if(isEmpty()==1) {
+		head=baru;
+		head->next=NULL;
+	} else {
+		bantu=head;
+		while(bantu->next!=NULL) {
+			bantu=bantu->next;
+		}
+		bantu->next=baru;
+	}
+	cout<<"\nData "<<nilai<<" dimasukan ke dalam list\n";
+}
+
+void Display() {
+	node *baru=new node;
+	baru=head;
+	if (isEmpty()==0){
+		cout<<"Data yang ada di dalam list : ";
+	while(baru!=NULL) {
+		cout<<baru->data<<" ";
+		baru=baru->next;
+		}
+	}
+	cout<<endl;
+	cout<<endl;
+}
+
 void DelFront() {
 	node *baru=new node;
 	baru=head;
@@ -66,39 +99,6 @@ void InsertPos(int letak, int nilai) {
 	
 	cout<<"\n\nData "<<nilai<<" dimasukan ke dalam list \n";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 int main() {
 	int pil;
