@@ -67,3 +67,96 @@ void InsertPos(int letak, int nilai) {
 	cout<<"\n\nData "<<nilai<<" dimasukan ke dalam list \n";
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main() {
+	int pil;
+	int nilai, letak;
+		cout<<"\t\t\t====================\n";
+		cout<<"\t\t\tSingle Linked List\n";
+		cout<<"\t\t\t===================\n\n";
+	create();
+	do {
+		cout<<"Pilih menu :\n";
+		cout<<"1. Menambahkan node depan\n";
+		cout<<"2. Menambahkan node belakang\n";
+		cout<<"3. Hapus node depan\n";
+		cout<<"4. Hapus node belakang\n";
+		cout<<"5. Menyisipkan node di letak tertentu\n";
+		cout<<"6. Keluar program\n\n";
+		cout<<"Masukan pilihan = ";
+		cin>>pil;
+		switch (pil) {
+			case 1 : 	cout<<"Masukan data = ";cin>>nilai;
+					 	InsFront(nilai);
+					 	Display();
+					 	break; 
+			case 2 : 	cout<<"Masukan data = ";cin>>nilai;
+					 	InsBack(nilai);
+					 	Display();
+					 	break; 
+					 
+			case 3 : 	DelFront();
+					 	cout<<"\nNode depan berhasil di hapus.\n";
+					 	Display();
+					 	break;
+					 
+			case 4 : 	DelBack();
+					 	cout<<"\nNode belakang berhasil di hapus.\n";
+					 	Display();
+					 	break;
+					 
+			case 5 : 	cout<<"Masukan letak ke Berapa : ";cin>>letak;
+					 	cout<<"Masukan nilai : ";cin>>nilai;
+					 	InsertPos(letak, nilai);
+					 	Display();
+					 	break;
+					 
+			case 6 : 	cout<<"\nTerima Kasih\n";
+					 	exit (0);
+					 	default : cout<<"Salah kode\n\n";
+					 	break;
+		} 
+		
+	}while(pil!=7);
+	return 0;
+}
+
+
+
+
+
+
+
+
