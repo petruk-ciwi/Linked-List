@@ -1,3 +1,8 @@
+//Lita Amelia 1817051001
+//Rahmayanti Kurniasih 1817051061
+//Atika Indah 1857051009
+//Sasya Salsabila Janerdi 1867051001
+
 #include<iostream>
 using namespace std;
 struct node {
@@ -21,7 +26,7 @@ void InsFront(int nilai) {
 	baru =new node;
 	baru->data=nilai;
 	baru->next=NULL;
-	if (isEmpty()==1){
+	if (isEmpty()==1) {
 		head=baru;
 		head->next=NULL;
 	} else {
@@ -89,7 +94,7 @@ void InsertPos(int letak, int nilai) {
 	node *after=new node;
 	node *baru=new node;
 	after=head;
-	for (int i=1; i<letak; i++){
+	for (int i=1; i<letak; i++) {
 		before=after;
 		after=after->next;
 	}
@@ -122,18 +127,19 @@ int main() {
 					 	InsFront(nilai);
 					 	Display();
 					 	break; 
+						
 			case 2 : 	cout<<"Masukan data = ";cin>>nilai;
 					 	InsBack(nilai);
 					 	Display();
 					 	break; 
 					 
 			case 3 : 	DelFront();
-					 	cout<<"\nNode depan berhasil di hapus.\n";
+					 	cout<<"\nNode depan telah di hapus.\n";
 					 	Display();
 					 	break;
 					 
 			case 4 : 	DelBack();
-					 	cout<<"\nNode belakang berhasil di hapus.\n";
+					 	cout<<"\nNode belakang telah di hapus.\n";
 					 	Display();
 					 	break;
 					 
@@ -149,7 +155,8 @@ int main() {
 					 	break;
 		} 
 		
-	}while(pil!=7);
+	} while(pil!=7);
+	
 	return 0;
 }
 
