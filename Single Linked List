@@ -30,4 +30,40 @@ void InsFront(int nilai) {
 	}
 	cout<<"\nData "<<nilai<<" dimasukan ke dalam list\n";
 }
+void DelFront() {
+	node *baru=new node;
+	baru=head;
+	head=head->next;
+	delete baru;
+}
+
+void DelBack() {
+	node *after=new node;
+	node *before=new node;
+	after=head;
+	while(after->next!=NULL)
+	{
+		before=after;
+		after=after->next;
+	}
+	tail=before;
+	before->next=NULL;
+	delete after;
+}
+
+void InsertPos(int letak, int nilai) {
+	node *before=new node;
+	node *after=new node;
+	node *baru=new node;
+	after=head;
+	for (int i=1; i<letak; i++){
+		before=after;
+		after=after->next;
+	}
+	baru->data=nilai;
+	before->next=baru;
+	baru->next=after;
+	
+	cout<<"\n\nData "<<nilai<<" dimasukan ke dalam list \n";
+}
 
